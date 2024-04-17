@@ -4,6 +4,9 @@ pipeline {
             label 'ana_sunucu'
         }
     }
+    triggers {
+        pollSCM '* * * * *'
+    }
     stages {
         stage('Build') {
             steps {
