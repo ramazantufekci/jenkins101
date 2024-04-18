@@ -14,7 +14,7 @@ class Nehir
     /**
    * baslangic metod
    */
-    private function __construct()
+    public function __construct()
     {
     }
 }
