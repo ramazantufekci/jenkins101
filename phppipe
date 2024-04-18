@@ -24,6 +24,8 @@ pipeline {
                   steps {
                       sh '''
                         cd myapphp
+                        composer require --dev phpstan/phpstan
+                        composer require "squizlabs/php_codesniffer=*"
                         vendor/bin/phpcs --standard=phpcs-compatibility.xml .
                         '''
                   }
@@ -32,6 +34,8 @@ pipeline {
                   steps {
                       sh '''
                         cd myapphp
+                        composer require --dev phpstan/phpstan
+                        composer require "squizlabs/php_codesniffer=*"
                         vendor/bin/phpstan analyse --error-format=checkstyle --no-progress -n . > build/logs/phpstan.checkstyle.xml
                         '''
                   }
