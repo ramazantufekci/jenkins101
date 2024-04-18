@@ -153,13 +153,3 @@
     </rule>
 
 </ruleset>
-<ruleset name="Default">
-    <arg name="report-checkstyle" value="build/logs/phpcs.checkstyle.xml" />
-</ruleset>
-<ruleset name="default">
-    <config name="ignore_errors_on_exit" value="1" />
-    <config name="ignore_warnings_on_exit" value="1" />
-</ruleset>
-<ruleset name="default">
-    <arg name="cache" value="build/cache/codesniffer.phpcs" />
-</ruleset>
