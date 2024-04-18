@@ -1,12 +1,11 @@
 <?php
 
 /**
- * bu dosya ornek dosya
-*/
-
-/**
- * Nehir class
-*/
+ * @category NehirHelper
+ * @package Helper
+ * @author Ramazan TÜFEKÇİ
+ * @link https://ramazantufekci.com
+ */
 namespace DRN;
 class Nehir
 {
