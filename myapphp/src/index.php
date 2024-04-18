@@ -1,3 +1,6 @@
+/**
+* bu dosya ornek dosya
+*/
 <?php
 /**
 * Nehir class
