@@ -25,7 +25,7 @@ pipeline {
                   steps {
                       sh '''
                         cd myapphp
-                        vendor/bin/phpcs --standard=phpcs-compatibility.xml .
+                        vendor/bin/phpcs --standard=phpcs-compatibility.xml src/
                         '''
                   }
               }
