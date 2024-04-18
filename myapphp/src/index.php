@@ -7,11 +7,11 @@
 */
 class Nehir
 {
-  /**
-  * baslangic metod
-  */
-  private function __construct()
-  {
+    /**
+   * baslangic metod
+   */
+    private function __construct()
+    {
 
-  }
+    }
 }
