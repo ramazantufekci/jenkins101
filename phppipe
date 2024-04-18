@@ -12,7 +12,10 @@ pipeline {
             parallel {
               stage('CodeSniffer') {
                   steps {
-                      sh 'vendor/bin/phpcs --standard=phpcs.xml .'
+                      sh '''
+                        cd myphpapp
+                        vendor/bin/phpcs --standard=phpcs.xml .
+                        '''
                   }
               }
               stage('PHP Compatibility Checks') {
