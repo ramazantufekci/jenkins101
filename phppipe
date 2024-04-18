@@ -22,12 +22,18 @@ pipeline {
               }
               stage('PHP Compatibility Checks') {
                   steps {
-                      sh 'vendor/bin/phpcs --standard=phpcs-compatibility.xml .'
+                      sh '''
+                        cd myapphp
+                        vendor/bin/phpcs --standard=phpcs-compatibility.xml .
+                        '''
                   }
               }
               stage('PHPStan') {
                   steps {
-                      sh 'vendor/bin/phpstan analyse --error-format=checkstyle --no-progress -n . > build/logs/phpstan.checkstyle.xml'
+                      sh '''
+                        cd myapphp
+                        vendor/bin/phpstan analyse --error-format=checkstyle --no-progress -n . > build/logs/phpstan.checkstyle.xml
+                        '''
                   }
               }
             }
