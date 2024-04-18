@@ -17,4 +17,8 @@ class Nehir
     public function __construct()
     {
     }
+
+    public function getName()
+    {
+    }
 }
