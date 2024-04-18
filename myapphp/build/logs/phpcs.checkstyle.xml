@@ -1,1 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="3.9.1">
+<file name="/var/lib/jenkins/workspace/php/myapphp/src/index.php">
+ <error line="3" column="4" severity="error" message="Doc comment short description must start with a capital letter" source="Generic.Commenting.DocComment.ShortNotCapital"/>
+ <error line="4" column="1" severity="warning" message="PHP version not specified" source="PEAR.Commenting.FileComment.MissingVersion"/>
+ <error line="4" column="1" severity="error" message="Missing @category tag in file comment" source="PEAR.Commenting.FileComment.MissingCategoryTag"/>
+ <error line="4" column="1" severity="error" message="Missing @package tag in file comment" source="PEAR.Commenting.FileComment.MissingPackageTag"/>
+ <error line="4" column="1" severity="error" message="Missing @author tag in file comment" source="PEAR.Commenting.FileComment.MissingAuthorTag"/>
+ <error line="4" column="1" severity="error" message="Missing @license tag in file comment" source="PEAR.Commenting.FileComment.MissingLicenseTag"/>
+ <error line="4" column="1" severity="error" message="Missing @link tag in file comment" source="PEAR.Commenting.FileComment.MissingLinkTag"/>
+ <error line="4" column="1" severity="error" message="Expected 1 space before asterisk; 0 found" source="Squiz.Commenting.DocCommentAlignment.SpaceBeforeStar"/>
+ <error line="8" column="1" severity="error" message="Expected 1 space before asterisk; 0 found" source="Squiz.Commenting.DocCommentAlignment.SpaceBeforeStar"/>
+ <error line="10" column="1" severity="error" message="Missing doc comment for class Nehir" source="PEAR.Commenting.ClassComment.Missing"/>
+ <error line="13" column="4" severity="error" message="Expected 5 spaces before asterisk; 3 found" source="Squiz.Commenting.DocCommentAlignment.SpaceBeforeStar"/>
+ <error line="13" column="6" severity="error" message="Doc comment short description must start with a capital letter" source="Generic.Commenting.DocComment.ShortNotCapital"/>
+ <error line="14" column="4" severity="error" message="Expected 5 spaces before asterisk; 3 found" source="Squiz.Commenting.DocCommentAlignment.SpaceBeforeStar"/>
+</file>
+</checkstyle>
 
