@@ -12,6 +12,8 @@ pipeline {
                   steps {
                       sh '''
                         cd myapphp
+                        composer config allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
+                        composer require --dev phpcsstandards/phpcsdevtools:^1.0
                         composer require --dev phpstan/phpstan
                         composer require "squizlabs/php_codesniffer=*"
                         ls -ltr vendor/bin
