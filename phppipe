@@ -18,6 +18,7 @@ pipeline {
                         composer require "squizlabs/php_codesniffer=*"
                         ls -ltr vendor/bin
                         vendor/bin/phpcs --standard=phpcs.xml src/
+                        echo $FILE
                         vendor/bin/phpcbf src/
                         cat src/index.php
                         '''
