@@ -1,9 +1,9 @@
 /**
-* bu dosya ornek dosya
+ * bu dosya ornek dosya
 */
 <?php
 /**
-* Nehir class
+ * Nehir class
 */
 class Nehir
 {
