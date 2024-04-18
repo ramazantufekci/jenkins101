@@ -8,14 +8,13 @@ pipeline {
         pollSCM '* * * * *'
     }
     stages {
-        stage('Static Analysis') {
-            parallel {
               stage('CodeSniffer') {
                   steps {
                       sh '''
                         cd myapphp
                         composer require --dev phpstan/phpstan
                         composer require "squizlabs/php_codesniffer=*"
+                        ls -ltr
                         vendor/bin/phpcs --standard=phpcs.xml .
                         '''
                   }
@@ -24,8 +23,6 @@ pipeline {
                   steps {
                       sh '''
                         cd myapphp
-                        composer require --dev phpstan/phpstan
-                        composer require "squizlabs/php_codesniffer=*"
                         vendor/bin/phpcs --standard=phpcs-compatibility.xml .
                         '''
                   }
@@ -34,14 +31,10 @@ pipeline {
                   steps {
                       sh '''
                         cd myapphp
-                        composer require --dev phpstan/phpstan
-                        composer require "squizlabs/php_codesniffer=*"
                         vendor/bin/phpstan analyse --error-format=checkstyle --no-progress -n . > build/logs/phpstan.checkstyle.xml
                         '''
                   }
               }
-            }
-        }
     }
     post {
             always {
