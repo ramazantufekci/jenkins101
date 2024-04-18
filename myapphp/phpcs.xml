@@ -19,7 +19,7 @@
     <arg name="report-checkstyle" value="build/logs/phpcs.checkstyle.xml" />
     <config name="ignore_errors_on_exit" value="1" />
     <config name="ignore_warnings_on_exit" value="1" />
-    <arg name="cache" value="build/cache/codesniffer.phpcs" />
+   
 
     <!-- Don't hide tokenizer exceptions -->
     <rule ref="Internal.Tokenizer.Exception">
