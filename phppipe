@@ -1,4 +1,12 @@
-stages {
+pipeline {
+    agent {
+        node {
+            label 'ana_sunucu'
+        }
+    }
+    triggers {
+        pollSCM '* * * * *'
+    }stages {
     stage('Static Analysis') {
         parallel {
           stage('CodeSniffer') {
@@ -34,4 +42,5 @@ stages {
             ])
         }
     }
+}
 }
