@@ -1,10 +1,12 @@
+<?php
 /**
  * bu dosya ornek dosya
 */
-<?php
+
 /**
  * Nehir class
 */
+namespace DRN;
 class Nehir
 {
     /**
@@ -12,6 +14,5 @@ class Nehir
    */
     private function __construct()
     {
-
     }
 }
