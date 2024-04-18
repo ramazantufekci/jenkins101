@@ -27,7 +27,8 @@ pipeline {
               }
             }
         }
-        post {
+    }
+    post {
             always {
                 recordIssues([
                     sourceCodeEncoding: 'UTF-8',
@@ -43,5 +44,4 @@ pipeline {
                 ])
             }
         }
-    }
 }
