@@ -1,5 +1,7 @@
 <?php
 
 class Nehir{
-  private function __construct(){}
+  private function __construct() {
+    
+  }
 }
