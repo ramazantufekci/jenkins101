@@ -5,11 +5,13 @@
 /**
 * Nehir class
 */
-class Nehir{
+class Nehir
+{
   /**
   * baslangic metod
   */
-  private function __construct() {
+  private function __construct()
+  {
     
   }
 }
