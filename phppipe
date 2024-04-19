@@ -40,7 +40,7 @@ pipeline {
     }
     post {
             always {
-                
+                echo "Başarılı"
             }
             failure {
                 echo "I failed"
