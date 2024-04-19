@@ -17,7 +17,7 @@ pipeline {
                         composer require --dev phpstan/phpstan
                         composer require "squizlabs/php_codesniffer=*"
                         ls -ltr vendor/bin
-                        vendor/bin/phpcs --standard=phpcs.xml src/
+                        vendor/bin/phpcs --standard=phpcs.xml src/ --report=checkstyle
                         '''
                   }
               }
