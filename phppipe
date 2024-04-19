@@ -33,7 +33,7 @@ pipeline {
                   steps {
                       sh '''
                         cd myapphp
-                        vendor/bin/phpcs --report=checkstyle src/ > build/logs/phpcs.checkstyle.xml
+                        vendor/bin/phpcs --report=checkstyle src/> build/logs/phpcs.checkstyle.xml
                         '''
                   }
               }
