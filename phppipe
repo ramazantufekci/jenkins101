@@ -33,7 +33,7 @@ pipeline {
                   steps {
                       sh '''
                         cd myapphp
-                        vendor/bin/phpstan analyse --error-format=checkstyle --no-progress -n src/ > build/logs/phpstan.checkstyle.xml
+                        vendor/bin/phpcs --report=checkstyle src/ > build/logs/phpstan.checkstyle.xml
                         '''
                   }
               }
