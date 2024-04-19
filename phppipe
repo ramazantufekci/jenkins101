@@ -45,7 +45,7 @@ pipeline {
                     enabledForFailure: true,
                     aggregatingResults: true,
                     tools: [
-                        phpCodeSniffer(id: 'phpcs', name: 'CodeSniffer', pattern: 'src/build/logs/phpcs.checkstyle.xml', reportEncoding: 'UTF-8'),
+                        phpCodeSniffer(id: 'phpcs', name: 'CodeSniffer', pattern: 'myapphp/src/build/logs/phpcs.checkstyle.xml', reportEncoding: 'UTF-8'),
                         phpStan(id: 'phpstan', name: 'PHPStan', pattern: 'build/logs/phpstan.checkstyle.xml', reportEncoding: 'UTF-8'),
                         phpCodeSniffer(id: 'phpcompat', name: 'PHP Compatibility', pattern: 'build/logs/phpcs-compat.checkstyle.xml', reportEncoding: 'UTF-8')
                     ]
