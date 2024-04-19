@@ -17,7 +17,7 @@ pipeline {
                         composer require --dev phpstan/phpstan
                         composer require "squizlabs/php_codesniffer=*"
                         ls -ltr vendor/bin
-                        vendor/bin/phpcs --standard=phpcs.xml src/ --report=checkstyle
+                        vendor/bin/phpcs --standard=phpcs.xml src/ --report=checkstyle --report-file=../build/logs/phpcs.checkstyle.xml
                         '''
                   }
               }
@@ -45,7 +45,7 @@ pipeline {
                     enabledForFailure: true,
                     aggregatingResults: true,
                     tools: [
-                        phpCodeSniffer(id: 'phpcs', name: 'CodeSniffer', pattern: 'build/logs/phpcs.checkstyle.xml', reportEncoding: 'UTF-8'),
+                        phpCodeSniffer(id: 'phpcs', name: 'CodeSniffer', pattern: 'src/build/logs/phpcs.checkstyle.xml', reportEncoding: 'UTF-8'),
                         phpStan(id: 'phpstan', name: 'PHPStan', pattern: 'build/logs/phpstan.checkstyle.xml', reportEncoding: 'UTF-8'),
                         phpCodeSniffer(id: 'phpcompat', name: 'PHP Compatibility', pattern: 'build/logs/phpcs-compat.checkstyle.xml', reportEncoding: 'UTF-8')
                     ]
