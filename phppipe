@@ -50,6 +50,9 @@ pipeline {
                         phpCodeSniffer(id: 'phpcompat', name: 'PHP Compatibility', pattern: 'build/logs/phpcs-compat.checkstyle.xml', reportEncoding: 'UTF-8')
                     ]
                 ])
+                failure {
+                    echo "I failed"
+                }
             }
         }
 }
