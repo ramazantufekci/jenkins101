@@ -40,16 +40,7 @@ pipeline {
     }
     post {
             always {
-                recordIssues([
-                    sourceCodeEncoding: 'UTF-8',
-                    enabledForFailure: true,
-                    aggregatingResults: true,
-                    tools: [
-                        phpCodeSniffer(id: 'phpcs', name: 'CodeSniffer', pattern: 'build/logs/phpcs.checkstyle.xml', reportEncoding: 'UTF-8'),
-                        phpStan(id: 'phpstan', name: 'PHPStan', pattern: 'build/logs/phpstan.checkstyle.xml', reportEncoding: 'UTF-8'),
-                        phpCodeSniffer(id: 'phpcompat', name: 'PHP Compatibility', pattern: 'build/logs/phpcs-compat.checkstyle.xml', reportEncoding: 'UTF-8')
-                    ]
-                ])
+                
             }
             failure {
                 echo "I failed"
