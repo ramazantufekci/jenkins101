@@ -10,7 +10,7 @@ pipeline {
     stages {
             stage('sonar sacnner') {
                 steps {
-                    sh "${scannerHome}/bin/sonar-scanner"
+                    sh "/opt/sonarqube/bin/linuxx86-64/sonar-scanner"
                 }
             }
               stage('CodeSniffer') {
