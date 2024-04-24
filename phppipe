@@ -8,6 +8,11 @@ pipeline {
         pollSCM '* * * * *'
     }
     stages {
+            stage('sonar sacnner') {
+                steps {
+                    sh "${scannerHome}/bin/sonar-scanner"
+                }
+            }
               stage('CodeSniffer') {
                   steps {
                       sh '''
