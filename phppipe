@@ -8,10 +8,10 @@ pipeline {
         pollSCM '* * * * *'
     }
     stages {
-            stage('sonar sacnner') {
-                def scannerHome = tool "SonarScanner"
-                steps {
-                    sh "/opt/sonarqube/bin/linuxx86-64/sonar-scanner"
+            stage('sonar scanner') {
+                def scannerHome = tool 'SonarScanner'
+                withSonarQubeEnv() {
+                    sh "${scannerHome}/bin/sonar-scanner"
                 }
             }
               stage('CodeSniffer') {
