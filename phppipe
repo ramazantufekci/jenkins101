@@ -9,7 +9,7 @@ pipeline {
     }
     stages {
             stage('sonar sacnner') {
-                def scannerHome = tool "SonarScanner";
+                def scannerHome = tool "SonarScanner"
                 steps {
                     sh "/opt/sonarqube/bin/linuxx86-64/sonar-scanner"
                 }
