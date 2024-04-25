@@ -21,6 +21,6 @@ class Nehir
 
     public function getName()
     {
-        // bu bir hata olabilir mi
+        return $this->password;
     }
 }
