@@ -11,6 +11,7 @@ namespace DRN;
 
 class Nehir
 {
+    private $password = "sifreistiyormusun";
     /**
    * baslangic metod
    */
