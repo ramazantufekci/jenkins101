@@ -1,0 +1,11 @@
+on:
+ push:
+jobs:
+ my:
+  name:my
+ ny:
+  name:ny
+  needs: my
+ vu:
+  name: Selam
+  needs: ny
