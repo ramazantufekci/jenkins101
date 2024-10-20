@@ -1,13 +1,31 @@
 on:
   push:
-    main
+    branches:
+      - main
 
 jobs:
   my:
-    name:my
+    name: my
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
   ny:
-    name:ny
-    need: my
+    name: ny
+    needs: my
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run after 'my' job
+        run: echo "This job runs after 'my' job"
+
   vu:
     name: Selam
-    need: ny
+    needs: ny
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run after 'ny' job
+        run: echo "This job runs after 'ny' job"
