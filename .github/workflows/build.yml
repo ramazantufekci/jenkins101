@@ -1,13 +1,13 @@
 on:
- push:
-  main
+  push:
+    main
 
 jobs:
- my:
-  name:my
- ny:
-  name:ny
-  needs: my
- vu:
-  name: Selam
-  needs: ny
+  my:
+    name:my
+  ny:
+    name:ny
+    needs: my
+  vu:
+    name: Selam
+    needs: ny
