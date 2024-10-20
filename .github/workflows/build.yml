@@ -7,7 +7,7 @@ jobs:
     name:my
   ny:
     name:ny
-    needs: my
+    need: my
   vu:
     name: Selam
-    needs: ny
+    need: ny
