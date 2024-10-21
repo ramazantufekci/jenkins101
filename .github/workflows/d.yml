@@ -6,16 +6,16 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Calıştır Bakalım
-        run: echo Merhaba
+      - name: "Calıştır Bakalım"
+        run: "echo Merhaba"
 
-      - name: 2 satır çalıştır
+      - name: "2 satır çalıştır"
         run: |
-          echo 1 satır
-          echo 2 satır
+          "echo 1 satır"
+          "echo 2 satır"
 
   build-db:
-    needs: build
+    needs: build-app
     runs-on: windows-latest
 
   package:
