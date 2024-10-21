@@ -1,0 +1,17 @@
+name: Env secrets and variable
+
+on:
+  workflow_dispatch:
+
+jobs:
+  devolopment:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: prod
+      url: https://github.com
+
+    steps:
+      - name: "Print secrets from environment"
+        run: |
+          echo "APP_SECRET: ${{ secrets.SEC}}
