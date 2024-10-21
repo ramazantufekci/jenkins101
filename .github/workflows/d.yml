@@ -1,0 +1,22 @@
+jobs:
+  build-app:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Calıştır Bakalım
+        run: echo Merhaba
+
+      - name: 2 satır çalıştır
+        run: |
+          echo 1 satır
+          echo 2 satır
+
+  build-db:
+    needs: build
+    runs-on: windows-latest
+
+  package:
+    needs: [build-app, build-db]
+    runs-on: self-hosted
