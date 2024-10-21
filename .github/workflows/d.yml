@@ -12,6 +12,11 @@ jobs:
           echo "1 satır"
           echo "2 satır"
 
+  build-api:
+    runs-on: windows-latest
+    steps:
+      - run: echo "Building Api"
+
   build-db:
     needs: build-app
     runs-on: windows-latest
@@ -20,6 +25,6 @@ jobs:
 
   package:
     needs: [build-app, build-db]
-    runs-on: self-hosted
+    runs-on: mac-latest
     steps:
       - run: echo "self hosted"
