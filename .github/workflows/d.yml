@@ -5,10 +5,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
       - name: "Calıştır Bakalım"
         run: "echo Merhaba"
-
       - name: "2 satır çalıştır"
         run: |
           "echo 1 satır"
