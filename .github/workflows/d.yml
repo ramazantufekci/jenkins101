@@ -13,7 +13,7 @@ jobs:
           echo "2 satır"
 
   build-db:
-    needs: build
+    needs: build-app
     runs-on: windows-latest
     steps:
       - run: echo "Hello windows"
