@@ -6,16 +6,20 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: "Calıştır Bakalım"
-        run: "echo Merhaba"
+        run: echo "Merhaba"
       - name: "2 satır çalıştır"
         run: |
-          "echo 1 satır"
-          "echo 2 satır"
+          echo "1 satır"
+          echo "2 satır"
 
   build-db:
-    needs: build-app
+    needs: build
     runs-on: windows-latest
+    steps:
+      - run: echo "Hello windows"
 
   package:
     needs: [build-app, build-db]
     runs-on: self-hosted
+    steps:
+      - run: echo "self hosted"
