@@ -1,3 +1,4 @@
+name: Basic WORKFLOW
 on: push
 jobs:
   build-app:
