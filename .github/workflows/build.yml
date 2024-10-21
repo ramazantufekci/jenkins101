@@ -23,9 +23,18 @@ jobs:
 
   vu:
     name: Selam
-    needs: ny
+    needs: my
     runs-on: ubuntu-latest
 
     steps:
       - name: Run after 'ny' job
         run: echo "This job runs after 'ny' job"
+  tu:
+    name: Selam2
+    needs: vu
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run after 'ny' job
+        run: echo "This job runs after 'ny' job"
+
