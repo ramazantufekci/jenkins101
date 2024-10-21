@@ -1,13 +1,29 @@
 name: Basic WORKFLOW
-on: push
+on: 
+  push:
+  workflow_dispatch:
+
+env:
+  DAY_OF_WEEK: funday
+  test-var: value-1
+  
 jobs:
   build-app:
     runs-on: ubuntu-latest
 
+    env:
+      Greeting: Dear
+      testvar: value-2
+    
     steps:
       - uses: actions/checkout@v3
       - name: "Calıştır Bakalım"
-        run: echo "Merhaba"
+        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
+          echo "test var $testvar"
+          echo "testvar ${{ env.testvar }}"
+        env:
+          First_Name: Student
+          testvar: value-3
       - name: "2 satır çalıştır"
         run: |
           echo "1 satır"
