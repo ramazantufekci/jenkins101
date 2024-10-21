@@ -38,3 +38,21 @@ jobs:
       - name: Run after 'ny' job
         run: echo "This job runs after 'ny' job"
 
+  su:
+    name: Selam3
+    needs: tu
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run after 'ny' job
+        run: echo "This job runs after 'ny' job"
+
+  mu:
+    name: Selam4
+    needs: ny
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run after 'ny' job
+        run: echo "This job runs after 'ny' job"
+
