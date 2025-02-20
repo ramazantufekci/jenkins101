@@ -1,3 +1,4 @@
+name: Derle bizi
 on:
   push:
     branches:
@@ -40,7 +41,7 @@ jobs:
 
   su:
     name: Selam3
-    needs: tu
+    needs: [tu,mu]
     runs-on: ubuntu-latest
 
     steps:
