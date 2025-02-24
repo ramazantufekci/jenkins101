@@ -32,7 +32,8 @@ jobs:
       # Install dependencies
       - name: Install dependencies
         run: |
-          cd /myapphp
+          ls -al
+          cd ./myapphp
           composer install --no-interaction 
 
       # Run tests (using PHPUnit as an example)
