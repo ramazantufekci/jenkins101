@@ -1,0 +1,50 @@
+name: PHP CI
+
+on:
+  push:
+    branches:
+      - main  # Run on push to main branch
+  pull_request:
+    branches:
+      - main  # Run on pull request targeting main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Run on the latest version of Ubuntu
+    
+    steps:
+      # Checkout the code
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Set up PHP
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'  # Specify PHP version, e.g., 7.4 or 8.0
+
+      # Install Composer
+      - name: Install Composer
+        run: |
+          curl -sS https://getcomposer.org/installer | php
+          mv composer.phar /usr/local/bin/composer
+
+      # Install dependencies
+      - name: Install dependencies
+        run: composer install --no-interaction
+
+      # Run tests (using PHPUnit as an example)
+      - name: Run tests
+        run: vendor/bin/phpunit --coverage-text
+
+      # Optionally: Run linting (PHP_CodeSniffer)
+      - name: Run PHP CodeSniffer
+        run: |
+          composer global require "squizlabs/php_codesniffer=*"
+          phpcs --standard=PSR12 src/
+
+      # Optionally: Run static analysis (PHPStan)
+      - name: Run PHPStan
+        run: |
+          composer require --dev phpstan/phpstan
+          vendor/bin/phpstan analyse
