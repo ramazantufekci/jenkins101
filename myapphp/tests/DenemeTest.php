@@ -7,7 +7,7 @@ class DenemeTest extends TestCase
 {
     public function testPrivateConstructor()
     {
-         $this->assertTrue(true, __DIR__."Constructor private olmalı");
+         $this->assertTrue(false, __DIR__."Constructor private olmalı");
         // Reflection kullanarak private constructor'ı açığa çıkar
         $reflection = new ReflectionClass('deneme');
         $constructor = $reflection->getConstructor();
