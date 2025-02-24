@@ -1,0 +1,11 @@
+{
+    "name": "drn/service",
+    "description": "github test",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Drn\\Service\\": "src/"
+        }
+    },
+    "require": {}
+}
