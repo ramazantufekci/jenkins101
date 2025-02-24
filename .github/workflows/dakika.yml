@@ -2,7 +2,7 @@ name: Dakika da bir
 
 on:
   schedule:
-    - cron: '1 * * * *'
+    - cron: '* * * * *'
 
 jobs:
   test:
