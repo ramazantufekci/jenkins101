@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 use ReflectionClass;
-use DRN\Deneme;
+use DRN\deneme;
 class DenemeTest extends TestCase
 {
     public function testPrivateConstructor()
