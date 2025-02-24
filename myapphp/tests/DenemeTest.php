@@ -2,14 +2,14 @@
 
 use PHPUnit\Framework\TestCase;
 use ReflectionClass;
-require_once __DIR__ . '/../src/deneme.php';
-use Drn\deneme;
+require_once __DIR__ . '/../src/Deneme.php';
+use Drn\Deneme;
 class DenemeTest extends TestCase
 {
     public function testPrivateConstructor()
     {
         // Reflection kullanarak private constructor'ı açığa çıkar
-        $reflection = new ReflectionClass(deneme::class);
+        $reflection = new ReflectionClass(Deneme::class);
         $constructor = $reflection->getConstructor();
         
         // Constructor'ın private olup olmadığını test et
