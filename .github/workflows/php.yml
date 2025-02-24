@@ -38,7 +38,9 @@ jobs:
 
       # Run tests (using PHPUnit as an example)
       - name: Run tests
-        run: vendor/bin/phpunit --coverage-text /myapphp
+        run: |
+          cd ./myapphp
+          vendor/bin/phpunit --coverage-text /myapphp
 
       # Optionally: Run linting (PHP_CodeSniffer)
       - name: Run PHP CodeSniffer
