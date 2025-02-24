@@ -40,7 +40,7 @@ jobs:
       - name: Run tests
         run: |
           cd ./myapphp
-          vendor/bin/phpunit --coverage-text 
+          vendor/bin/phpunit --coverage-text .
 
       # Optionally: Run linting (PHP_CodeSniffer)
       - name: Run PHP CodeSniffer
