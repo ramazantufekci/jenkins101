@@ -31,20 +31,20 @@ jobs:
 
       # Install dependencies
       - name: Install dependencies
-        run: composer install --no-interaction
+        run: composer install --no-interaction /myapphp
 
       # Run tests (using PHPUnit as an example)
       - name: Run tests
-        run: vendor/bin/phpunit --coverage-text
+        run: vendor/bin/phpunit --coverage-text /myapphp
 
       # Optionally: Run linting (PHP_CodeSniffer)
       - name: Run PHP CodeSniffer
         run: |
           composer global require "squizlabs/php_codesniffer=*"
-          phpcs --standard=PSR12 src/
+          phpcs --standard=PSR12 /myapphp/src/
 
       # Optionally: Run static analysis (PHPStan)
       - name: Run PHPStan
         run: |
-          composer require --dev phpstan/phpstan
-          vendor/bin/phpstan analyse
+          composer require --dev phpstan/phpstan /myapphp
+          vendor/bin/phpstan analyse /myapphp/src/
