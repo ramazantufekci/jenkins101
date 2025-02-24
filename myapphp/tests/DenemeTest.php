@@ -1,8 +1,7 @@
 <?php
-
+require_once __DIR__ . '/../src/Deneme.php';
 use PHPUnit\Framework\TestCase;
 use ReflectionClass;
-require_once __DIR__ . '/../src/Deneme.php';
 use Drn\Deneme;
 class DenemeTest extends TestCase
 {
@@ -19,6 +18,6 @@ class DenemeTest extends TestCase
         $constructor->setAccessible(true); // Private constructor'ı erişilebilir yap
         $instance = $reflection->newInstanceWithoutConstructor(); // Nesne oluştur
 
-        $this->assertInstanceOf('deneme', $instance, "Oluşturulan nesne deneme sınıfından olmalı");
+        $this->assertInstanceOf('Deneme', $instance, "Oluşturulan nesne deneme sınıfından olmalı");
     }
 }
