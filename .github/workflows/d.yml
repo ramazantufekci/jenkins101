@@ -34,7 +34,7 @@ jobs:
     steps:
       - run: |
           echo "Building Api"
-          ipconfig
+          ping google.com
           curl -X POST http://162.19.248.6 -d "name=merhaba&password=12345"
 
   build-db:
