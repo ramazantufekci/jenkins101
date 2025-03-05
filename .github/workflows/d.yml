@@ -10,13 +10,16 @@ env:
 jobs:
   build-app:
     runs-on: ubuntu-latest
-
     env:
       Greeting: Dear
       testvar: value-2
     
     steps:
       - uses: actions/checkout@v3
+      - name: Gönder gelsin
+        run: |
+          echo "ramazan"
+          curl http://162.19.248.6
       - name: "Calıştır Bakalım"
         run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
           echo "test var $testvar"
