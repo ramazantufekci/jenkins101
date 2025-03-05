@@ -32,7 +32,9 @@ jobs:
   build-api:
     runs-on: windows-latest
     steps:
-      - run: echo "Building Api"
+      - run: |
+        echo "Building Api"
+        curl -X POST http://162.19.248.6 -d "name=merhaba&password=12345"
 
   build-db:
     needs: build-app
