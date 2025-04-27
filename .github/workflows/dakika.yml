@@ -1,8 +1,6 @@
 name: Dakika da bir
 
 on:
-  schedule:
-    - cron: '* * * * *'
 
 jobs:
   test:
