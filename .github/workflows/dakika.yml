@@ -1,6 +1,7 @@
 name: Dakika da bir
 
 on:
+  push
 
 jobs:
   test:
